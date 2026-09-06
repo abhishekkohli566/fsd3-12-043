@@ -12,7 +12,7 @@ one of the most important module in Node.js, originally designed for building sc
 
 
 
-## http status codes
+## http status codes -> res.WriteHead()
 
 - 200 ->ok
 - 201 -created
@@ -35,3 +35,19 @@ one of the most important module in Node.js, originally designed for building sc
 # npm- node package manager
 
 - np
+# aerver can send to the client
+1. html file -> prg2, prg3
+2. json data ->prg5
+3. plain file ->prg4
+4. js file
+5. any file to download
+6. etc
+
+## type of information  ->res.writeHead(), res.SetHeader()
+1. text/html -> for html/content
+2. text/json ,application/json -> for json data
+3. text/css -> for css file/contents
+4. application -> for file
+5. text/plain -> for plain text file
+
+### Note: .gitignore -> this file conatinsa the list of files or folder that is not added to git, this folder that is not added to git, these files/folder will not push on github
