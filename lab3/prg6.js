@@ -2,16 +2,19 @@ import { createReadStream } from "fs";
 import http from "http";
 
 const server = http.createServer((req, res) => {
-  if (req.url === "/") res.end("<h1>Home Page");
-  else if (req.url === "/product") {
-
-    const stream = createReadStream("product.html", { encoding: "utf-8" });
-    stream.pipe(res);
-
-    
+  if (req.url === "/") {
+    res.end(`
+      <h1>Home Page</h1>
+      <a href="/product">Product</a>
+      <a href="/contact">Contact Us</a>
+    `);
+  } else if (req.url === "/product") {
+    createReadStream("product.html", { encoding: "utf-8" }).pipe(res);
+  } else if (req.url === "/contact") {
+    createReadStream("contactUs.html", { encoding: "utf-8" }).pipe(res);
   } else {
     res.statusCode = 404;
-    res.end("Not found");
+    res.end("<h1>404 - Page Not Found</h1>");
   }
 });
 
