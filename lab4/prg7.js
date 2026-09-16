@@ -17,4 +17,4 @@ const server = http.createServer((req, res) => {
     res.end();
   }
 });
-server.listen(3001, () => console.log("prg7 is running..."));
+server.listen(3000, () => console.log("prg7 is running..."));
