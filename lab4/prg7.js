@@ -1,10 +1,10 @@
 import http from "http";
-import { addUsers, getUsers } from "./users.js";
+import { getAllUsers, getUsersById, updateUsers, addUsers, deleteUser} from "./users.js";
 
 const server = http.createServer((req, res) => {
 
   if (req.url === "/api/users" && req.method === "GET") {
-    res.end(JSON.stringify(getUsers()));
+    res.end(JSON.stringify(getAllUsers()));
   } else if (req.url === "/api/users" && req.method === "POST") {
     let body ='';
     req.on('data',(chunk)=>{
@@ -18,7 +18,12 @@ const server = http.createServer((req, res) => {
    
   } else if (req.url.startsWith( "/api/users/") && req.method == "GET") {
    const userId =Number(req.url.split('/').pop())
-    
+    const userFound = getUsersById(userId);
+    if(!userFound){
+      req.end(JSON.stringify({msg: `user not found`}));
+    }else{
+      req.end(JSON.stringify(userFound));
+    }
     res.end(JSON.stringify({ msg: `Showing detail of user with id  ${userId
         
     }` }));
