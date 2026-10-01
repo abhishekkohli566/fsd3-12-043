@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inquiry - Contact Us</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            background-color: #1a252f;
+            color: #ffffff;
+            padding: 40px;
+        }
+
+        .contact-info h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .contact-info p {
+            color: #bdc3c7;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+
+        .info-item strong {
+            display: block;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+
+        .contact-form {
+            flex: 2;
+            min-width: 300px;
+            padding: 40px;
+        }
+
+        .contact-form h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .contact-form p {
+            margin-bottom: 25px;
+            color: #666;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #2c3e50;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .submit-btn {
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Direct Contact Information Side Bar -->
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Have questions about a product or need a custom quotation? We are here to help.</p>
+
+            <div class="info-item">
+                <strong>Sales & Support Email</strong>
+                <span>sales@yourcompany.com</span>
+            </div>
+
+            <div class="info-item">
+                <strong>Phone Number</strong>
+                <span>+1 (800) 123-4567</span>
+            </div>
+
+            <div class="info-item">
+                <strong>Business Hours</strong>
+                <span>Monday – Friday: 9 AM – 5 PM EST</span>
+            </div>
+
+            <div class="info-item">
+                <strong>Response Time</strong>
+                <span>We typically respond to product inquiries within 24 hours.</span>
+            </div>
+        </div>
+
+        <!-- Product Inquiry Form -->
+        <div class="contact-form">
+            <h2>Product Inquiry</h2>
+            <p>Please fill out the details below so we can assist you better.</p>
+
+            <form action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Optional">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productName">Product Name / Model Number *</label>
+                        <input type="text" id="productName" name="productName" required placeholder="e.g., Model X-200 or SKU-123">
+                    </div>
+                    <div class="form-group">
+                        <label for="inquiryType">Inquiry Type</label>
+                        <select id="inquiryType" name="inquiryType">
+                            <option value="general">General Information</option>
+                            <option value="pricing">Pricing & Bulk Discount</option>
+                            <option value="stock">Stock & Availability</option>
+                            <option value="customization">Customization / OEM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Estimated Quantity Required</label>
+                    <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g., 50">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message / Specifications *</label>
+                    <textarea id="message" name="message" required placeholder="Describe your inquiry, specific requirements, or questions..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Inquiry</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
