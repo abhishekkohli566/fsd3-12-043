@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacBook Pro 3 — Next Generation Power</title>
+    <style>
+        :root {
+            --bg-color: #050507;
+            --card-bg: #121215;
+            --accent: #a855f7;
+            --accent-glow: rgba(168, 85, 247, 0.4);
+            --text-primary: #ffffff;
+            --text-muted: #94a3b8;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Top Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(5, 5, 7, 0.8);
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .buy-btn {
+            background: var(--accent);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 99px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 0 15px var(--accent-glow);
+            transition: opacity 0.2s ease;
+        }
+
+        .buy-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 160px 20px 80px;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 7vw, 6rem);
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+            background: linear-gradient(180deg, #fff 30%, #64748b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 50px;
+        }
+
+        /* Device Frame */
+        .laptop-container {
+            max-width: 750px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .screen {
+            background: #000;
+            border: 10px solid #27272a;
+            border-radius: 16px 16px 0 0;
+            aspect-ratio: 16 / 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 80px rgba(168, 85, 247, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chip-graphic {
+            width: 140px;
+            height: 140px;
+            background: rgba(168, 85, 247, 0.1);
+            border: 2px solid var(--accent);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent);
+            box-shadow: 0 0 40px var(--accent-glow);
+        }
+
+        .keyboard-base {
+            height: 14px;
+            background: #18181b;
+            border-radius: 0 0 16px 16px;
+            width: 108%;
+            margin-left: -4%;
+            border-top: 2px solid #3f3f46;
+        }
+
+        /* Feature Cards */
+        .features {
+            max-width: 1000px;
+            margin: 120px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 32px;
+            border-radius: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Specs Table */
+        .specs {
+            max-width: 800px;
+            margin: 0 auto 120px;
+            padding: 0 20px;
+        }
+
+        .specs h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .specs-table td {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .specs-table td:first-child {
+            color: var(--text-muted);
+            width: 40%;
+        }
+
+        .specs-table td:last-child {
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">MacBook Pro 3</div>
+        <a href="#buy" class="buy-btn">Pre-order</a>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-tag">Architecture Redefined</div>
+            <h1>MacBook Pro 3</h1>
+            <p>Driven by the revolutionary M3 chip generation. Extreme performance meets unprecedented battery efficiency.</p>
+
+            <div class="laptop-container">
+                <div class="screen">
+                    <div class="chip-graphic">M3</div>
+                </div>
+                <div class="keyboard-base"></div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>3nm Architecture</h3>
+                <p>Industry-leading transistor density delivering maximum computing power with minimal energy draw.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Dynamic Caching</h3>
+                <p>Hardware-accelerated ray tracing optimizes high-speed memory for demanding pro software.</p>
+            </div>
+            <div class="feature-card">
+                <h3>24-Hour Battery</h3>
+                <p>Work seamlessly through full production cycles without ever searching for a power outlet.</p>
+            </div>
+        </section>
+
+        <section class="specs">
+            <h2>Technical Specifications</h2>
+            <table class="specs-table">
+                <tr>
+                    <td>Processor</td>
+                    <td>Apple M3 / M3 Pro / M3 Max</td>
+                </tr>
