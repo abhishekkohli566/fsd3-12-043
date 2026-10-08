@@ -20,6 +20,4 @@ app.use((req,res) =>{
     req.statusCode(404).send("<h1> page not found</h1>")
 })
 
-
-
 app.listen(4444,()=>console.log('prg2 is running at 4444'));
