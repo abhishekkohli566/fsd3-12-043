@@ -37,3 +37,6 @@ cd backend
     app.listen(4444,()=>console.log('prg1 is running at 4444'));
     ```
     
+## static import
+* in express we can get any static html pages with the help of express.static pages
+* express support middleware, when we have to execute sum functions before server execution there we use middleware app.use always applied to insert any middleware 
