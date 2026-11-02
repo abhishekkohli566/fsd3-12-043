@@ -5,6 +5,7 @@ const app = express();
 const urlpath= fileURLToPath(import.meta.url);// refence name of the place where the project is saved
 const rootFolder = path.dirname(urlpath)
 
+
 app.use(express.static(path.join(rootFolder,"pages")));
 
 // this line is writen in last 
