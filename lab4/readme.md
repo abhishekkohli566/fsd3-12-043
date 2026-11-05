@@ -15,6 +15,7 @@ script{
 8. to run use `npm run dev`
 
 
+
 ## Rest api
 ### Represntaional state Transfer( REST)
 - majorly bakend server return only data not html file
