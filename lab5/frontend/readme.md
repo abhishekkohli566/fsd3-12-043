@@ -3,7 +3,7 @@
  ```
  1. cd frontend ## goto frontend folder(should be in small case) folder
  2. npm create vite@latest #press y if asked to install
- 3.prss . to as project name 
+ 3.press . to as project name 
  4. select react as framework
  5. sleect javascript as varient
  6. selsct ESlint as linter
