@@ -32,3 +32,7 @@ export default defineConfig({
  5. open index.css and remove all content 
  6. delete app.css
  ```
+
+ ## usestate will return two things
+ *. variabal, functrion - the function can be used to update the variables value
+ *. it is a funtion that is avaialabel in react and its take default value of variable 
