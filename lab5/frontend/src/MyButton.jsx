@@ -1,20 +1,33 @@
-// rafce
-import React from 'react'
-let click =0;
 
-const mybutton = () => {
-    const handleClick=() =>{
-       // alert("button clicked");
-        click++;
-        console.log("Button clicked:" ,click);
-    }
+import { useState } from "react";
+
+
+const MyButton = () => {
+  const [count, setCount] = useState(0);
+
+  function Add1Click() {
+    setCount(count + 1);
+  }
+
+  function Sub1Click() {
+    setCount(count - 1);
+  }
+
   return (
-    <div>
-        <p>CLick on the button</p>
-        <h2>Button clicked: {click}</h2>
-        <button onClick={handleClick}>Click me</button>
-    </div>
-  )
-}
+    <div className="text-center my-6">
+      <p>Click on the button</p>
 
-export default mybutton
+      <h2>Button Clicked: {count}</h2>
+
+      <button onClick={Add1Click}>
+        Add 1
+      </button>
+
+      <button onClick={Sub1Click}>
+        Sub 1
+      </button>
+    </div>
+  );
+};
+
+export default MyButton;
